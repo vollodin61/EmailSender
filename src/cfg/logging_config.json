@@ -1,0 +1,32 @@
+{
+    "error_logger": {
+        "log_file": "src/data/logs/error.log",
+        "level": "ERROR",
+        "max_bytes": 10485760,
+        "backup_count": 3
+    },
+    "info_logger": {
+        "log_file": "src/data/logs/info.log",
+        "level": "INFO",
+        "max_bytes": 10485760,
+        "backup_count": 3
+    },
+    "warning_logger": {
+        "log_file": "src/data/logs/warning.log",
+        "level": "WARNING",
+        "max_bytes": 10485760,
+        "backup_count": 3
+    },
+    "success_logger": {
+        "log_file": "src/data/logs/success.log",
+        "level": "INFO",
+        "max_bytes": 10485760,
+        "backup_count": 3
+    },
+    "debug_logger": {
+      "log_file": "src/data/logs/debug_log.log",
+      "level": "DEBUG",
+      "max_bytes": 10485760,
+      "backup_count": 3
+    }
+}

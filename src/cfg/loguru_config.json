@@ -1,0 +1,34 @@
+{
+    "sinks": [
+        {
+            "log_file": "src/data/logs/error.log",
+            "level": "ERROR",
+            "rotation": "10 MB",
+            "retention": "3 month"
+        },
+        {
+            "log_file": "src/data/logs/info.log",
+            "level": "INFO",
+            "rotation": "10 MB",
+            "retention": "3 month"
+        },
+        {
+            "log_file": "src/data/logs/warning.log",
+            "level": "WARNING",
+            "rotation": "10 MB",
+            "retention": "3 month"
+        },
+        {
+            "log_file": "src/data/logs/success.log",
+            "level": "INFO",
+            "rotation": "10 MB",
+            "retention": "3 month"
+        },
+        {
+          "log_file": "src/data/logs/debug.log",
+          "level": "DEBUG",
+          "rotation": "10 MB",
+          "retention": "3 month"
+        }
+    ]
+}

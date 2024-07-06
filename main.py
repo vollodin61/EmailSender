@@ -6,7 +6,7 @@ from time import sleep
 
 from environs import Env
 
-from src.cfg.config import debug_logger
+from src.cfg.config import debug_logger, success_logger, my_logger
 from src.utils.cleaner import get_list_addresses
 
 env = Env()
@@ -23,7 +23,7 @@ try:
     with open('src/data/to_send.eml', 'rb') as f:
         msg = BytesParser(policy=policy.default).parse(f)
 except Exception as e:
-    debug_logger(f"Ошибка при чтении файла .eml: {e}")
+    debug_logger.debug(f"Ошибка при чтении файла .eml: {e}")
 
 
 def sender_emails(list_addresses: list):
@@ -37,9 +37,10 @@ def sender_emails(list_addresses: list):
             try:
                 smtp.login(user=sender_email, password=password)
                 smtp.send_message(message)
+                my_logger.info(f'Message success sent to: {address}')
                 sleep(0.5)
             except Exception as e:
-                debug_logger(f'Ошибка при отправке письма: {e}')
+                my_logger.debug(f'Ошибка при отправке письма: {e}')
 
 
 if __name__ == '__main__':
